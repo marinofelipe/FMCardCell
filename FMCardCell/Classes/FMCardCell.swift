@@ -16,6 +16,7 @@ import UIKit
 @objc public protocol FMCardCellDelegate {
     
     func numberOfCardsInCell() -> FMCardCellType
+    func cardViewForCell() -> FMCardView
 }
 
 open class FMCardCell: UITableViewCell {
@@ -47,18 +48,18 @@ open class FMCardCell: UITableViewCell {
         let originX = bounds.origin.x
         let originY = bounds.origin.y
         
-        let horizontalMargins = leftMargin + rightMargin/2
+        let horizontalMargins = leftMargin + rightMargin / CGFloat(cardsCount)
         let verticalMargins = topMargin + bottomMargin
 
         
         for index in 1...cardsCount {
-            let card: FMCardView
+            let card: FMCardView = self.delegate.cardViewForCell()
             switch index {
             case 1:
-                card = FMCardView.init(frame: CGRect(x: originX + leftMargin, y: originY + topMargin, width: width/CGFloat(cardsCount) - horizontalMargins, height: height - verticalMargins))
+                card.frame = CGRect(x: originX + leftMargin, y: originY + topMargin, width: width/CGFloat(cardsCount) - horizontalMargins, height: height - verticalMargins)
                 break
             default:
-                card = FMCardView.init(frame: CGRect(x: originX + width/CGFloat(cardsCount) + rightMargin / 2, y: originY + topMargin, width: width/CGFloat(cardsCount) - horizontalMargins, height: height - verticalMargins))
+                card.frame = CGRect(x: originX + width/CGFloat(cardsCount) + rightMargin / 2, y: originY + topMargin, width: width/CGFloat(cardsCount) - horizontalMargins, height: height - verticalMargins)
                 break
             }
             

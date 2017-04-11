@@ -14,6 +14,8 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		98284DDAA74C7EE05D040FD4 /* Pods_FMCardCell_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96F8AFAC57E717D82C6DF397 /* Pods_FMCardCell_Example.framework */; };
+		D54453C41E9C5D7700E28C66 /* MyPersonalizedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54453C31E9C5D7700E28C66 /* MyPersonalizedCardView.swift */; };
+		D54453C61E9C5D8B00E28C66 /* MyPersonalizedCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D54453C51E9C5D8B00E28C66 /* MyPersonalizedCardView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 		B9AC882C1930B4AC1BA78C08 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		CA4BA3DF0863E6A692FFE102 /* FMCardCell.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FMCardCell.podspec; path = ../FMCardCell.podspec; sourceTree = "<group>"; };
 		CD66AC687135723AA2410F4C /* Pods-FMCardCell_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FMCardCell_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-FMCardCell_Example/Pods-FMCardCell_Example.release.xcconfig"; sourceTree = "<group>"; };
+		D54453C31E9C5D7700E28C66 /* MyPersonalizedCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPersonalizedCardView.swift; sourceTree = "<group>"; };
+		D54453C51E9C5D8B00E28C66 /* MyPersonalizedCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyPersonalizedCardView.xib; sourceTree = "<group>"; };
 		DC22586494CFBB244A8F7804 /* Pods_FMCardCell_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FMCardCell_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -100,6 +104,8 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				D54453C31E9C5D7700E28C66 /* MyPersonalizedCardView.swift */,
+				D54453C51E9C5D8B00E28C66 /* MyPersonalizedCardView.xib */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -241,6 +247,7 @@
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				D54453C61E9C5D8B00E28C66 /* MyPersonalizedCardView.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				D54453C41E9C5D7700E28C66 /* MyPersonalizedCardView.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

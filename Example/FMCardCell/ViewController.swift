@@ -53,6 +53,12 @@ extension ViewController: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "FMCardCell", for: indexPath) as! FMCardCell
         
+        cell.selectionStyle = .none
+        
+        //You can change the default margin values
+        cell.topMargin = 11
+        cell.bottomMargin = 11
+        
         cell.delegate = self
         
         return cell
@@ -60,7 +66,13 @@ extension ViewController: UITableViewDataSource {
 }
 
 extension ViewController: FMCardCellDelegate {
+    func cardViewForCell() -> FMCardView {
+        let card = Bundle.main.loadNibNamed("MyPersonalizedCardView", owner: self, options: nil)!.first as! MyPersonalizedCardView
+        
+        return card        
+    }
+
     func numberOfCardsInCell() -> FMCardCellType    {
-        return .Double
+        return .Single
     }
 }

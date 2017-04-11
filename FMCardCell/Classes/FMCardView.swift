@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FMCardView: UIView {
+open class FMCardView: UIView {
 
     /*
     // Only override draw() if you perform custom drawing.
@@ -31,11 +31,11 @@ class FMCardView: UIView {
         self.frame = frame
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
     }
     
-    override func layoutSubviews() {
+    override open func layoutSubviews() {
         backgroundColor = UIColor.white
         
         layer.cornerRadius = cornerRadius
@@ -46,16 +46,5 @@ class FMCardView: UIView {
         layer.shadowOffset = CGSize(width: shadowOffsetWidth, height: shadowOffsetHeight)
         layer.shadowOpacity = shadowOpacity
         layer.shadowPath = shadowPath.cgPath
-        
-        addTextContent()
     }
-    
-    func addTextContent() {
-        let label = UILabel.init(frame: CGRect(x: self.bounds.origin.x + 10, y: self.bounds.origin.y + 10, width: 200, height: 30))
-        label.text = "Titulo do Card"
-        
-        addSubview(label)
-    }
-
-
 }
