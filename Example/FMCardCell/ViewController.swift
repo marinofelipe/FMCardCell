@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import FMCardCell
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        tableView.delegate = self
+        tableView.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,3 +27,40 @@ class ViewController: UIViewController {
 
 }
 
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("row: \(indexPath.row)")
+    }
+}
+
+extension ViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        /// *** ///
+        
+        tableView.register(FMCardCell.classForCoder(), forCellReuseIdentifier: "FMCardCell")
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FMCardCell", for: indexPath) as! FMCardCell
+        
+        cell.delegate = self
+        
+        return cell
+    }
+}
+
+extension ViewController: FMCardCellDelegate {
+    func numberOfCardsInCell() -> FMCardCellType    {
+        return .Double
+    }
+}

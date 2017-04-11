@@ -1,0 +1,22 @@
+{
+  "name": "FMCardCell",
+  "version": "0.1.0",
+  "summary": "Simple way to build tableView with cards as cells",
+  "description": "FMCardCell has cards as subviews. To use it's necessary to inherit from it.'",
+  "homepage": "https://github.com/marinofelipe/FMCardCell",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Felipe Marino": "felipemarino91@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Felipe Marino/FMCardCell.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "FMCardCell/**/*.{swift}"
+}

@@ -1,0 +1,16 @@
+PODS:
+  - FMCardCell (0.1.0)
+
+DEPENDENCIES:
+  - FMCardCell (from `../`)
+
+EXTERNAL SOURCES:
+  FMCardCell:
+    :path: ../
+
+SPEC CHECKSUMS:
+  FMCardCell: 6fcd63907d9845fb0a742078b013d0c0ba03f9a9
+
+PODFILE CHECKSUM: ae8e9f94bc583f8ff7d00b993f8e5542a8af15d7
+
+COCOAPODS: 1.2.0

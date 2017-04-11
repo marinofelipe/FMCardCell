@@ -1,0 +1,6 @@
+framework module FMCardCell {
+  umbrella header "FMCardCell-umbrella.h"
+
+  export *
+  module * { export * }
+}
